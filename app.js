@@ -3,14 +3,13 @@ const passport = require("passport");
 const OAuth2Strategy = require("passport-oauth2");
 const session = require('express-session');
 const jwt_decode = require('jwt-decode');
-const connectEnsureLogin = require('connect-ensure-login');// authorization
 require('dotenv').config()
 
 const app = express();
 
 // Middleware
 app.use(express.static(__dirname + '/public'));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.set('views', __dirname);
@@ -71,11 +70,6 @@ function authenticationMiddleware () {
   }
 }
 
-/**
- * Function authenticationMiddleware() and connectEnsureLogin.ensureLoggedIn(), they do the same thing.
- * Both of them are used for demonstration. In practical, one of them is enough.
- */
-
 // Routes
 app.get('/', function (req, res){
     res.render('index.html');
@@ -85,7 +79,7 @@ app.get('/home', authenticationMiddleware(), function (req, res){
   res.render('home.html', {user: req.user.employeeCode});
 });
 
-app.get('/contact', connectEnsureLogin.ensureLoggedIn(), function (req, res){
+app.get('/contact', authenticationMiddleware(), function (req, res){
   res.render('contact.html');
 });
 
