@@ -22,6 +22,10 @@ body{
     width: 100%;
 }
 
+#logout {
+    height: 23px;
+}
+
 h4 {
     font-size: 2rem;
     font-weight: 200;
@@ -37,9 +41,14 @@ h1 {
     padding: 1.8rem 0;
 }
 
+button { 
+    letter-spacing: .1rem;
+}
+
 p { 
     letter-spacing: .1rem;
     padding: 2rem;
+    margin-bottom: 0rem;
 }
 
 .fa-stack.fa-2x {
