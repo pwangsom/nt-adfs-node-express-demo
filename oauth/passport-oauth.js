@@ -23,7 +23,7 @@ function initPassport(){
         tokenURL: process.env.TOKEN_URL,
         clientID: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
-        callbackURL: "https://www.ntportal.com/oauth2/callback"
+        callbackURL: process.env.CALLBACK_URL
     },
 
         function (accessToken, refreshToken, params, profile, done) {
