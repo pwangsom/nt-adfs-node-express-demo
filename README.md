@@ -1,4 +1,4 @@
-# ADFS Node Oauth2.0 Demo
+# NodeJS ADFS Oauth2.0 Demo
 
 ## Prerequitsite
 Before starting the app, the environment file is required. Please create **.env** file in the root folder and please insert the following environment variables.
