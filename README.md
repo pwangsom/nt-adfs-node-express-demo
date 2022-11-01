@@ -1,21 +1,18 @@
-# nt-adfs-node-express-demo
+# ADFS Node Oauth2.0 Demo
 
+## Prerequitsite
+Before starting the app, the environment file is required. Please create **.env** file in the root folder and please insert the following environment variables.
 
-Prerequisite
-Before starting the app, the environment file is required.
-Please create .env file in the root folder and please insert the following environment variables.
+##### PORT = 80 // Can be any port
+##### AUTH_URL = 'AUTHORIZATION URL'
+##### TOKEN_URL = 'TOKEN URL'
+##### CALLBACK_URL = 'CALLBACK URL'
+##### END_SESSION = 'LOGOUT URL'
+##### CLIENT_ID = 'CLIENT ID'
+##### CLIENT_SECRET = 'CLIENT SECRET'
 
-PORT = 80 // Can be any port
-AUTH_URL = 'AUTHORIZATION URL'
-TOKEN_URL = 'TOKEN URL'
-CALLBACK_URL = 'CALLBACK URL'
-END_SESSION = 'LOGOUT URL'
-CLIENT_ID = 'CLIENT ID'
-CLIENT_SECRET = 'CLIENT SECRET'
-
-
-Install
+## Install
 ### `$ npm intsall`
 
-Run
+## Run
 ### `$ npm start`
